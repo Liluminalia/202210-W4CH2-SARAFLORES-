@@ -11,6 +11,12 @@ type User = {
 };
 
 export function Paso1() {
+    const [counter, setCounter] = useState(0);
+
+    const handlerCounter = (item: number) => {
+        setCounter(counter + item);
+    };
+
     const user: User = {
         name: "",
         lastName: "",
@@ -81,7 +87,12 @@ export function Paso1() {
                     Other
                 </label>
                 <label>
-                    <input type="radio" name="gender" value="not-mention" />
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="not-mention"
+                        checked
+                    />
                     Prefiero no indicarlo
                 </label>
             </div>
@@ -105,7 +116,13 @@ export function Paso1() {
                     />{" "}
                 </label>
             </div>
-            <button>Paso 2</button>
+            <button
+                onInput={() => {
+                    handlerCounter(+1);
+                }}
+            >
+                Paso 2
+            </button>
         </form>
     );
 }
