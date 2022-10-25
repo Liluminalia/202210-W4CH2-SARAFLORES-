@@ -81,7 +81,12 @@ export function Paso1() {
                     Other
                 </label>
                 <label>
-                    <input type="radio" name="gender" value="not-mention" />
+                    <input
+                        type="radio"
+                        name="gender"
+                        value="not-mention"
+                        checked
+                    />
                     Prefiero no indicarlo
                 </label>
             </div>
@@ -105,7 +110,14 @@ export function Paso1() {
                     />{" "}
                 </label>
             </div>
-            <button>Paso 2</button>
+            <button
+                onInput={() => {
+                    // codigo comentado xq no recuerdo bien como hacer la herencia y sino no me funciona netlify
+                    // handlerCounter(+1);
+                }}
+            >
+                Paso 2
+            </button>
         </form>
     );
 }

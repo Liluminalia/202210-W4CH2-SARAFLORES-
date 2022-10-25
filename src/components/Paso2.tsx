@@ -2,7 +2,7 @@ import { SyntheticEvent, useState } from "react";
 import "./Form.scss";
 
 type UserAccount = {
-    name: string;
+    userName: string;
     password: string;
     repeatPassword: string;
     account: string;
@@ -10,7 +10,7 @@ type UserAccount = {
 
 export function Paso2() {
     const UserAccount: UserAccount = {
-        name: "",
+        userName: "",
         password: "",
         repeatPassword: "",
         account: "",
@@ -40,7 +40,7 @@ export function Paso2() {
                     type="text"
                     name="username"
                     placeholder="usuario"
-                    value={form.name}
+                    value={form.userName}
                     onInput={handleForm}
                 />
             </div>
@@ -75,14 +75,16 @@ export function Paso2() {
             </div>
             <button
                 onInput={() => {
-                    handlerCounter(-1);
+                    // codigo comentado xq no recuerdo bien como hacer la herencia y sino no me funciona netlify
+                    // handlerCounter(-1);
                 }}
             >
                 Paso 2
             </button>
             <button
                 onInput={() => {
-                    handlerCounter(+1);
+                    // codigo comentado xq no recuerdo bien como hacer la herencia y sino no me funciona netlify
+                    // handlerCounter(+1);
                 }}
             >
                 Paso 3
