@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import "./App.css";
 import { Paso1 } from "./components/Paso1";
 import "./components/Form.scss";
-import { Paso2 } from "./components/paso2";
-import { Paso3 } from "./components/paso3";
-import { Submited } from "./components/Submited";
+//not used yet
+// import { Paso2 } from "./components/paso2";
+// import { Paso3 } from "./components/paso3";
+// import { Submited } from "./components/Submited";
 
 function App() {
     const [counter, setCounter] = useState(0);
