@@ -5,6 +5,22 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
-
+.container-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 .title-form {
+    font-size: 35px;
+    margin: 2rem;
+    display: flex;
+}
+.form__item {
+    padding: 2rem;
+    display: flex;
+}
+.item__radio {
+    display: flex;
+    flex-direction: row;
 }
