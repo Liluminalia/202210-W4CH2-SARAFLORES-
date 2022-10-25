@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "./App.css";
 import { Paso1 } from "./components/Paso1";
 import "./components/Form.scss";
@@ -8,27 +7,33 @@ import { Paso3 } from "./components/paso3";
 import { Submited } from "./components/Submited";
 
 function App() {
-    if ((setCounter = 1)) {
-        return (
-            <div className="App">
-                <Paso2></Paso2>
-            </div>
-        );
-    }
-    if ((setCounter = 2)) {
-        return (
-            <div className="App">
-                <Paso3></Paso3>
-            </div>
-        );
-    }
-    if ((setCounter = 3)) {
-        return (
-            <div className="App">
-                <Submited></Submited>
-            </div>
-        );
-    }
+    const [counter, setCounter] = useState(0);
+
+    const handlerCounter = (item: number) => {
+        setCounter(counter + item);
+    };
+    // codigo comentado xq no recuerdo bien como hacer la herencia y sino no me funciona netlify
+    // if ((setCounter = 1)) {
+    //     return (
+    //         <div className="App">
+    //             <Paso2></Paso2>
+    //         </div>
+    //     );
+    // }
+    // if ((setCounter = 2)) {
+    //     return (
+    //         <div className="App">
+    //             <Paso3></Paso3>
+    //         </div>
+    //     );
+    // }
+    // if ((setCounter = 3)) {
+    //     return (
+    //         <div className="App">
+    //             <Submited></Submited>
+    //         </div>
+    //     );
+    // }
     return (
         <div className="App">
             <Paso1></Paso1>

@@ -11,12 +11,6 @@ type User = {
 };
 
 export function Paso1() {
-    const [counter, setCounter] = useState(0);
-
-    const handlerCounter = (item: number) => {
-        setCounter(counter + item);
-    };
-
     const user: User = {
         name: "",
         lastName: "",
@@ -118,7 +112,8 @@ export function Paso1() {
             </div>
             <button
                 onInput={() => {
-                    handlerCounter(+1);
+                    // codigo comentado xq no recuerdo bien como hacer la herencia y sino no me funciona netlify
+                    // handlerCounter(+1);
                 }}
             >
                 Paso 2
