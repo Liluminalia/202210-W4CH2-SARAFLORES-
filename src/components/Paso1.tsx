@@ -10,7 +10,7 @@ type User = {
     newsletter: boolean;
 };
 
-export function Form() {
+export function Paso1() {
     const user: User = {
         name: "",
         lastName: "",
