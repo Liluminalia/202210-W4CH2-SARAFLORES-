@@ -36,71 +36,76 @@ export function Form() {
     };
 
     return (
-        <form onSubmit={handlerSubmit}>
+        <form onSubmit={handlerSubmit} className="container-form">
             <legend className="title-form">Paso 1</legend>
-            <div>
+            <div className="form__item">
                 <input
                     type="text"
                     name="name"
                     value={form.name}
                     onInput={handleForm}
                     placeholder="Dime tu nombre"
+                    required
                 />
             </div>
-            <div>
+            <div className="form__item">
                 <input
                     type="text"
                     name="lastName"
                     value={form.lastName}
                     onInput={handleForm}
                     placeholder="Dime tu apellido"
+                    required
                 />
             </div>
-            <div>
+            <div className="form__item">
                 <input
-                    type="text"
+                    type="date"
                     name="birthDate"
-                    value={form.birthDate}
-                    onInput={handleForm}
-                    placeholder="instroduzca su fecha de nacimiento"
+                    placeholder="Indica tu fecha de nacimiento"
+                    required
                 />
             </div>
-            <div>
-                <select
-                    onSelect={handleForm}
-                    name="gender"
-                    value={form.gender}
-                    placeholder="Indique su género"
-                >
-                    <option value="male">Hombre</option>
-                    <option value="female">Mujer</option>
-                    <option value="other">Otro</option>
-                    <option selected value="prefer not to mention">
-                        Prefiero no indicarlo
-                    </option>
-                </select>
+            <div className="item__radio">
+                Indica tu género
+                <label>
+                    <input type="radio" name="gender" value="male" />
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="female" />
+                    Female
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="other" />
+                    Other
+                </label>
+                <label>
+                    <input type="radio" name="gender" value="not-mention" />
+                    Prefiero no indicarlo
+                </label>
             </div>
-            <div>
+            <div className="form__item">
                 <input
-                    type="text"
+                    type="email"
                     name="email"
-                    value={form.email}
-                    onInput={handleForm}
-                    placeholder="instroduzca su e-mail"
+                    placeholder="Indica tu e-mail"
+                    required
                 />
             </div>
-            <div>
+            <div className="form__item">
                 <label>
                     Suscribirse a nuestra Newslatter
                     <input
                         type="checkbox"
                         name="newsletter"
+                        required
                         checked={form.newsletter}
                         onChange={handleForm}
                     />{" "}
                 </label>
             </div>
-            <button type="submit">Enviar</button>
+            <button>Paso 2</button>
         </form>
     );
 }
