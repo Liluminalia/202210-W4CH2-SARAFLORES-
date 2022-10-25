@@ -1,13 +1,13 @@
 import React from "react";
 
 import "./App.css";
-import { Form } from "./components/Form";
+import { Paso1 } from "./components/Paso1";
 import "./components/Form.scss";
 
 function App() {
     return (
         <div className="App">
-            <Form></Form>
+            <Paso1></Paso1>
         </div>
     );
 }
