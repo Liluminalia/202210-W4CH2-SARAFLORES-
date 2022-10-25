@@ -1,26 +1,22 @@
 import { SyntheticEvent, useState } from "react";
 import "./Form.scss";
 
-type User = {
+type UserAccount = {
     name: string;
-    lastName: string;
-    birthDate: string;
-    gender: string;
-    email: string;
-    newsletter: boolean;
+    password: string;
+    repeatPassword: string;
+    account: string;
 };
 
 export function Paso2() {
-    const user: User = {
+    const UserAccount: UserAccount = {
         name: "",
-        lastName: "",
-        birthDate: "",
-        gender: "",
-        email: "",
-        newsletter: false,
+        password: "",
+        repeatPassword: "",
+        account: "",
     };
 
-    const [form, setForm] = useState(user);
+    const [form, setForm] = useState(UserAccount);
 
     const handlerSubmit = (ev: SyntheticEvent) => {
         ev.preventDefault();
@@ -37,75 +33,60 @@ export function Paso2() {
 
     return (
         <form onSubmit={handlerSubmit} className="container-form">
-            <legend className="title-form">Paso 1</legend>
-            <div className="form__item">
+            <legend className="title-form">Paso 2</legend>
+            <div>
+                <legend>Username</legend>
                 <input
                     type="text"
-                    name="name"
+                    name="username"
+                    placeholder="usuario"
                     value={form.name}
                     onInput={handleForm}
-                    placeholder="Dime tu nombre"
-                    required
                 />
             </div>
-            <div className="form__item">
+            <div>
+                <legend>Password</legend>
                 <input
-                    type="text"
-                    name="lastName"
-                    value={form.lastName}
+                    type="password"
+                    name="password"
+                    placeholder="contraseña"
+                    value={form.password}
                     onInput={handleForm}
-                    placeholder="Dime tu apellido"
-                    required
                 />
             </div>
-            <div className="form__item">
+            <div>
+                <legend>Repeat Password</legend>
                 <input
-                    type="date"
-                    name="birthDate"
-                    placeholder="Indica tu fecha de nacimiento"
-                    required
+                    type="password"
+                    name="repeatPassword"
+                    value={form.repeatPassword}
+                    onInput={handleForm}
                 />
             </div>
-            <div className="item__radio">
-                Indica tu género
-                <label>
-                    <input type="radio" name="gender" value="male" />
-                    Male
-                </label>
-                <label>
-                    <input type="radio" name="gender" value="female" />
-                    Female
-                </label>
-                <label>
-                    <input type="radio" name="gender" value="other" />
-                    Other
-                </label>
-                <label>
-                    <input type="radio" name="gender" value="not-mention" />
-                    Prefiero no indicarlo
-                </label>
+            <div>
+                <select>
+                    Tipo de cuenta
+                    <option value="personal">personal</option>
+                    <option value="pro">pro</option>
+                    <option selected value="business">
+                        business
+                    </option>
+                </select>
             </div>
-            <div className="form__item">
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Indica tu e-mail"
-                    required
-                />
-            </div>
-            <div className="form__item">
-                <label>
-                    Suscribirse a nuestra Newslatter
-                    <input
-                        type="checkbox"
-                        name="newsletter"
-                        required
-                        checked={form.newsletter}
-                        onChange={handleForm}
-                    />{" "}
-                </label>
-            </div>
-            <button>Paso 2</button>
+            <button
+                onInput={() => {
+                    handlerCounter(-1);
+                }}
+            >
+                Paso 2
+            </button>
+            <button
+                onInput={() => {
+                    handlerCounter(+1);
+                }}
+            >
+                Paso 3
+            </button>
         </form>
     );
 }
