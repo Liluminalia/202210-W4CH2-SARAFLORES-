@@ -8,12 +8,13 @@ import "./components/Form.scss";
 // import { Submited } from "./components/Submited";
 
 function App() {
-    const [counter, setCounter] = useState(0);
-
-    const handlerCounter = (item: number) => {
-        setCounter(counter + item);
-    };
     // codigo comentado xq no recuerdo bien como hacer la herencia y sino no me funciona netlify
+
+    // const [counter, setCounter] = useState(0);
+
+    // const handlerCounter = (item: number) => {
+    //     setCounter(counter + item);
+    // };
     // if ((setCounter = 1)) {
     //     return (
     //         <div className="App">
