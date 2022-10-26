@@ -8,6 +8,8 @@ type User = {
     gender: string;
     email: string;
     newsletter: boolean;
+    password: string;
+    repeatPassword: string;
 };
 
 export function Paso3() {
@@ -18,6 +20,8 @@ export function Paso3() {
         gender: "",
         email: "",
         newsletter: false,
+        password: "",
+        repeatPassword: "",
     };
 
     const [form, setForm] = useState(user);
@@ -38,8 +42,8 @@ export function Paso3() {
     return (
         <form onSubmit={handlerSubmit} className="container-form">
             <legend className="title-form">Paso 1</legend>
-            {/*  codigo comentado xq no recuerdo bien como hacer la herencia y
-            sino no me funciona netlify
+            codigo comentado xq no recuerdo bien como hacer la herencia y sino
+            no me funciona netlify
             <div>
                 {" "}
                 <h2>Verifique sus datos</h2>
@@ -52,7 +56,7 @@ export function Paso3() {
                 <p>Username: {form.name}</p>
                 <p>Password: {form.password}</p>
                 <p>Repeat password: {form.repeatPassword}</p>
-            </div> */}
+            </div>
             <button
                 type="submit"
                 onClick={() => {
