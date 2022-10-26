@@ -10,7 +10,7 @@ import "./components/Form.scss";
 function App() {
     // codigo comentado xq no recuerdo bien como hacer la herencia y sino no me funciona netlify
 
-    //const [counter, setCounter] = useState(0);
+    // const [counter, setCounter] = useState(0);
 
     // const handlerCounter = (item: number) => {
     //     setCounter(counter + item);

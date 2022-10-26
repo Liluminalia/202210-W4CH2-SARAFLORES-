@@ -5,11 +5,25 @@ html {
     padding: 0;
     box-sizing: border-box;
 }
-.container-form {
+#root {
     display: flex;
+    padding: 2rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.container-form {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+    border: 1px rgb(103, 147, 218) solid;
+    border-radius: 15px;
+    box-shadow: 3px 3px 20px lightblue;
+    max-width: 400px;
 }
 .title-form {
     font-size: 35px;
